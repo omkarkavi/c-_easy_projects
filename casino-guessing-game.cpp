@@ -3,27 +3,27 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-	cout << "My rock paper scissors game";
+	cout << "Number guessing game";
 	int i=0;
 	
 	int j;
 	int k;
 	while(i<5)
 	{
-		cout << "\nSelect 1 for rock\n2 for paper\n3 for scissor"<<endl;
+		cout << "Select a number between 1-5"<<endl;
 		cin >> k;
 		
-		if(k>=1 and k<=3)
+		if(k>=1 and k<=5)
 		{
 			k = k -1;
-			j=rand()%3;
-			if(k-j== 1 or k-j == -2)  // O{N} complexity solutions
+			j=rand()%5;
+			if(k==j)  // O{N} complexity solutions
 			{
 				cout << "You win\n";
 				
 			}
 			else{
-				cout << "Computer wins\n";
+				cout << "House wins\n";
 			}
 			i = i+1;
 			
